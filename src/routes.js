@@ -2,10 +2,8 @@ const express = require('express')
 
 const api = express.Router()
 
-api.get('/', (request, response) => {
-    response.json({
-     "route": "/",
-    })
-})
+const userController = require('./controllers/userController')
+
+api.get('/patients', userController.index)
 
 module.exports = api
