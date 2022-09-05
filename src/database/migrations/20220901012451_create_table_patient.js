@@ -13,10 +13,10 @@ exports.up = async knex => {
      table.integer('cep').notNullable,
      table.text('address'),
      table.text('city'),
-     table.text('country')
+     table.text('country'),
      
 
-     table.timestamp('created_at').defaultTo(knex.fn.now())
+     table.timestamp('created_at').defaultTo(knex.fn.now()),
      table.timestamp('updated_at').defaultTo(knex.fn.now())
   })
 };
